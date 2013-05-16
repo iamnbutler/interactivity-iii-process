@@ -54,18 +54,29 @@ a {
   text-decoration: none;
   font-weight: bold; }
 
+a:hover {
+  color: #ff675c; }
+
 .base-panel {
   position: fixed;
   top: 0;
   width: 100%;
-  background-image: url("../img/bg.png");
-  -webkit-background-size: 100% auto;
-  background-size: auto 100%;
-  background-position: center;
-  background-repeat: no-repeat;
   text-align: center;
   display: table;
   height: 60%; }
+  .base-panel .bg-image {
+    background-image: url("../img/bg.png");
+    -webkit-background-size: 100% auto;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 25px;
+    width: 400px;
+    height: 400px;
+    margin-left: 50%;
+    left: -200px;
+    position: absolute;
+    z-index: 1; }
   .base-panel h1 {
     padding-bottom: 24px;
     text-transform: uppercase;
@@ -74,24 +85,37 @@ a {
   .base-panel h2 {
     color: #333;
     font-weight: 300; }
-  .base-panel .inner-wrapper {
-    display: table-cell;
-    vertical-align: middle; }
+  .base-panel .headline {
+    position: absolute;
+    z-index: 2;
+    width: 240px;
+    margin-left: 50%;
+    left: -120px;
+    margin-top: 200px; }
 
 .wrapper {
   position: relative;
   padding-top: 80%;
-  width: 100%; }
+  width: 96%;
+  margin: 0 2%; }
   .wrapper .inner-wrapper {
-    padding: 60px 10% 40px 10%;
-    min-height: 1200px;
+    padding: 30px 10% 40px 10%;
+    border-top: 4px solid #ff675c;
     background-color: white; }
-  .wrapper span {
-    font-weight: bold; }
+  .wrapper .project {
+    padding-bottom: 20px;
+    border-bottom: 1px solid whitesmoke;
+    margin-bottom: 16px; }
   .wrapper span.source {
     padding-left: 2px;
     vertical-align: super;
     font-size: 65%; }
+  .wrapper h1 {
+    font-size: 130%;
+    line-height: 2.5; }
+  .wrapper h2 {
+    font-size: 95%;
+    line-height: 2.4; }
   .wrapper p, .wrapper blockquote {
     margin-bottom: 20px;
     font-size: 90%;
@@ -100,13 +124,12 @@ a {
     padding-left: 8px;
     border-left: 2px #eeeeee solid; }
   .wrapper ul, .wrapper ol {
-    padding-top: 20px;
     padding-left: 20px; }
   .wrapper ol {
-    padding-left: 30px; }
+    padding-left: 35px; }
   .wrapper li {
     padding: 5px 0px;
-    width: 70%;
+    width: 80%;
     font-size: 80%;
     line-height: 1.6; }
   .wrapper ul li {
@@ -118,6 +141,12 @@ a {
   .wrapper br {
     width: 100%;
     height: 40px; }
+  .wrapper .light-grey {
+    color: #999; }
+  .wrapper .inactive {
+    color: #999; }
+    .wrapper .inactive a {
+      color: #999; }
   .wrapper .opening {
     color: #666; }
 
@@ -129,3 +158,14 @@ a {
     padding-top: 500px;
     width: 500px;
     margin: 0 auto; } }
+/* Animation
+====================== */
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg); }
+
+  to {
+    -webkit-transform: rotate(360deg); } }
+
+.rotate {
+  -webkit-animation: rotate 50s linear infinite; }

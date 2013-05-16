@@ -20,18 +20,31 @@ a {
 	font-weight: bold;
 }
 
+a:hover {
+	color: #ff675c;
+}
+
 .base-panel {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background-image: url("../img/bg.png");
-	-webkit-background-size: 100% auto;
-	background-size: auto 100%;
-	background-position: center;
-	background-repeat: no-repeat;
 	text-align: center;
 	display: table;
 	height: 60%;
+	.bg-image {
+		background-image: url("../img/bg.png");
+		-webkit-background-size: 100% auto;
+		background-size: auto 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		margin-top: 25px;
+		width: 400px;
+		height: 400px;
+		margin-left: 50%;
+		left: -200px;
+		position: absolute;
+		z-index: 1;
+	}
 	h1 {
 		padding-bottom: 24px;
 		text-transform: uppercase;
@@ -42,28 +55,44 @@ a {
 		color: #333;
 		font-weight: 300;
 	}
-	.inner-wrapper {
-		display: table-cell;
-		vertical-align: middle;
+	.headline {
+		position: absolute;
+		z-index: 2;
+		width: 240px;
+		margin-left: 50%;
+		left: -120px;
+		margin-top: 200px;
 	}
 }
 
 .wrapper {
 	position: relative;
 	padding-top: 80%;
-	width: 100%;
+	width: 96%;
+	margin: 0 2%;
 	.inner-wrapper {
-		padding: 60px 10% 40px 10%;
-		min-height: 1200px;
+		padding: 30px 10% 40px 10%;
+		border-top: 4px solid #ff675c;
 		background-color:white;
 	}
-	span {
-		font-weight: bold;
+	.project {
+		padding-bottom: 20px;
+		border-bottom: 1px solid #F5F5F5;
+		margin-bottom: 16px;
 	}
+
 	span.source {
 		padding-left: 2px;
 		vertical-align: super;
 		font-size: 65%;
+	}
+	h1 {
+		font-size: 130%;
+		line-height: 2.5;
+	}
+	h2 {
+		font-size:95%;
+		line-height: 2.4;
 	}
 	p, blockquote {
 		margin-bottom: 20px;
@@ -75,15 +104,14 @@ a {
 		border-left: 2px #EEEEEE solid;
 	}
 	ul, ol {
-		padding-top: 20px;
 		padding-left: 20px;
 	}
 	ol {
-		padding-left: 30px;
+		padding-left: 35px;
 	}
 	li {
 		padding: 5px 0px;
-		width: 70%;
+		width: 80%;
 		font-size: 80%;
 		line-height: 1.6;
 	}
@@ -100,6 +128,15 @@ a {
 		width: 100%;
 		height: 40px;
 	}
+	.light-grey {
+		color: #999;
+	}
+	.inactive {
+		color: #999;
+		a {
+			color: #999;
+		}
+	}
 	.opening {
 		color: #666;
 	}
@@ -114,4 +151,20 @@ a {
 		width: 500px;
 		margin: 0 auto;
 	}
+}
+
+/* Animation
+====================== */
+
+@-webkit-keyframes rotate {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    -webkit-animation: rotate 50s linear infinite;
 }
