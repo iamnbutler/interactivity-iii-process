@@ -63,14 +63,13 @@ a:hover {
   width: 100%;
   text-align: center;
   display: table;
-  height: 60%; }
+  height: 500px; }
   .base-panel .bg-image {
     background-image: url("../img/bg.png");
     -webkit-background-size: 100% auto;
     background-size: auto 100%;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 25px;
     width: 400px;
     height: 400px;
     margin-left: 50%;
@@ -91,11 +90,11 @@ a:hover {
     width: 240px;
     margin-left: 50%;
     left: -120px;
-    margin-top: 200px; }
+    margin-top: 180px; }
 
 .wrapper {
   position: relative;
-  padding-top: 80%;
+  padding-top: 400px;
   width: 96%;
   margin: 0 2%; }
   .wrapper .inner-wrapper {
@@ -151,13 +150,16 @@ a:hover {
     color: #666; }
 
 @media screen and (min-width: 600px) {
-  .base-panel {
-    height: 500px; }
+  .bg-image {
+    margin-top: 50px; }
 
   .wrapper {
     padding-top: 500px;
     width: 500px;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+
+  .base-panel .headline {
+    margin-top: 230px; } }
 /* Animation
 ====================== */
 @-webkit-keyframes rotate {
